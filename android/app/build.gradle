@@ -1,6 +1,8 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
+apply plugin: 'com.google.gms.google-services'
+
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -81,6 +83,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     signingConfigs {
         debug {
@@ -102,12 +105,18 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+
+    configurations {
+        all*.exclude group: 'com.facebook.reactnative.androidsdk', module: 'BuildConfig'
+    }
 }
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:flipper-integration")
+    implementation("com.facebook.android:facebook-android-sdk:[8,9)")
+    implementation("androidx.multidex:multidex:2.0.1")
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
@@ -116,4 +125,10 @@ dependencies {
     }
 }
 
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf', 'MaterialCommunityIcons.ttf', 'Ionicons.ttf', 'FontAwesome5.ttf', 'AntDesign.ttf'] // Specify font files
+]
+
+
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)

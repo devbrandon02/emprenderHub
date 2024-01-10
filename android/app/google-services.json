@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "78075596629",
+    "project_id": "emprenderapp-f85bd",
+    "storage_bucket": "emprenderapp-f85bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78075596629:android:92020daaed59ef27ba69dc",
+        "android_client_info": {
+          "package_name": "com.emprenderapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78075596629-695mq6fs5jlp2on9f6jj1ibig0m8a9i7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emprenderapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "78075596629-324l46v2m66c4mujgo9763c0ofs6tg86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD01n-0w9XtCJ_8hDbT3OJodmJ93RfYD8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78075596629-324l46v2m66c4mujgo9763c0ofs6tg86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
